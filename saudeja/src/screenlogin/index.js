@@ -70,7 +70,3 @@ const styles=StyleSheet.create({
 
 export default Screenlogin;
 
-// width: 257px;
-//   border-radius: 8px;
-//   box-shadow: #B3B3B3 0px 3px 1px;
-//   border: 2px solid rgb(179, 179, 179);
