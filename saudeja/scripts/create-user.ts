@@ -7,6 +7,7 @@
  * Exemplo:
  * npx ts-node scripts/create-user.ts 12345678909 minhasenha
  */
+
 import 'dotenv/config';
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';

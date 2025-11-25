@@ -4,6 +4,7 @@
  * Uso:
  * npx ts-node scripts/test-connection.ts
  */
+
 import 'dotenv/config';
 import { PrismaClient } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
