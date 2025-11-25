@@ -1,12 +1,15 @@
 {
   "expo": {
-    "name": "saudeja",
-    "slug": "saudeja",
+    "name": "saudeja-plus-v2",
+    "slug": "saudeja-plus-v2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "router": {
+      "origin": false
+    },
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -20,9 +23,12 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
     },
+    "scheme": "saudejaplus",
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
     }
   }
