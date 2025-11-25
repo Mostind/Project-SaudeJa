@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "saudeja-plus-v2",
-    "slug": "saudeja-plus-v2",
+    "name": "saudeja",
+    "slug": "saudeja",
     "extra":{
       "supabaseUrl":"https://hrqeuyiubbfglyxctoph.supabase.co",
-      "supabaseAnonKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhycWV1eWl1YmJmZ2x5eGN0b3BoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2OTMzMjAsImV4cCI6MjA3OTI2OTMyMH0.N4d6H64oUqbTJUcCtfl79N-eeyJAW4hIUR9HX6SlHg8"
+      "supabaeAnonKey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhycWV1eWl1YmJmZ2x5eGN0b3BoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM2OTMzMjAsImV4cCI6MjA3OTI2OTMyMH0.N4d6H64oUqbTJUcCtfl79N-eeyJAW4hIUR9HX6SlHg8"
     },
     "version": "1.0.0",
     "orientation": "portrait",
@@ -37,3 +37,4 @@
     }
   }
 }
+
