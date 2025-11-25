@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 
 const supabaseUrl = process.env.SUPABASE_URL || 'https://hrqeuyiubbfglyxctoph.supabase.co';
@@ -11,8 +11,12 @@ if (supabaseUrl === 'https://hrqeuyiubbfglyxctoph.supabase.co' || supabaseAnonKe
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
-    // Usando AsyncStorage para o Supabase Auth, que é o correto para React Native/Expo
-    storage: AsyncStorage,
+    // O Supabase Client para React Native precisa de um storage compatível
+    storage: {
+      getItem: (key) => localStorage.getItem(key),
+      setItem: (key, value) => localStorage.setItem(key, value),
+      removeItem: (key) => localStorage.removeItem(key),
+    },
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: false,
