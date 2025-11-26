@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  cpf        String    @unique @db.VarChar(14)
+  password   String    @db.VarChar(255)
+  created_at DateTime? @default(now()) @db.Timestamp(6)
+  updated_at DateTime? @default(now()) @db.Timestamp(6)
+
+  @@index([cpf], map: "idx_users_cpf")
+  @@map("users")
+}
+
+model Vaccine {
+  id                   Int                 @id @default(autoincrement())
+  name                 String              @db.VarChar(255)
+  description          String
+  age_range            String              @db.VarChar(255)
+  target_audience      String
+  prevented_diseases   String
+  details              String
+  created_at           DateTime?           @default(now()) @db.Timestamp(6)
+  updated_at           DateTime?           @default(now()) @db.Timestamp(6)
+  health_post_vaccines HealthPostVaccine[]
+
+  @@map("vaccines")
+}
+
+model HealthPost {
+  id                   Int                 @id @default(autoincrement())
+  name                 String              @db.VarChar(255)
+  address              String
+  latitude             Float
+  longitude            Float
+  created_at           DateTime?           @default(now()) @db.Timestamp(6)
+  updated_at           DateTime?           @default(now()) @db.Timestamp(6)
+  health_post_vaccines HealthPostVaccine[]
+
+  @@map("health_posts")
+}
+
+model HealthPostVaccine {
+  id             Int        @id @default(autoincrement())
+  health_post_id Int
+  vaccine_id     Int
+  available      Boolean?   @default(true)
+  created_at     DateTime?  @default(now()) @db.Timestamp(6)
+  updated_at     DateTime?  @default(now()) @db.Timestamp(6)
+  health_posts   HealthPost @relation(fields: [health_post_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  vaccines       Vaccine    @relation(fields: [vaccine_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([health_post_id, vaccine_id])
+  @@index([health_post_id], map: "idx_health_post_vaccines_post")
+  @@index([vaccine_id], map: "idx_health_post_vaccines_vaccine")
+  @@map("health_post_vaccines")
+}
