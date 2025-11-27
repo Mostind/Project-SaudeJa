@@ -15,3 +15,7 @@ O aplicativo busca oferecer uma experiência intuitiva e moderna, permitindo que
  ° Obtenha informações detalhadas sobre cada vacina, incluindo público-alvo, faixa etária e doenças prevenidas.
 
 Assim, o SaúdeJá+ tem como meta integrar tecnologia e saúde pública, contribuindo para a digitalização dos serviços municipais e promovendo um atendimento mais rápido, transparente e eficiente à população.
+
+PASSO A PASSO:
+cd saudeja
+npm install
