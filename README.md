@@ -1,4 +1,5 @@
 Objetivo do Projeto “SaúdeJá+”
+
 O projeto SaúdeJá+ foi desenvolvido no contexto da disciplina Programação para Dispositivos Móveis com o objetivo de tornar o sistema de vacinação mais eficiente, acessível e organizado para os cidadãos.
 A proposta surgiu da necessidade de facilitar o acesso às informações sobre vacinas e postos de saúde, reduzindo filas, melhorando a comunicação entre o usuário e o sistema público de saúde e garantindo maior controle sobre o histórico vacinal.
 O aplicativo busca oferecer uma experiência intuitiva e moderna, permitindo que o usuário:
@@ -8,7 +9,9 @@ O aplicativo busca oferecer uma experiência intuitiva e moderna, permitindo que
 ° Obtenha informações detalhadas sobre cada vacina, incluindo público-alvo, faixa etária e doenças prevenidas.
 Assim, o SaúdeJá+ tem como meta integrar tecnologia e saúde pública, contribuindo para a digitalização dos serviços municipais e promovendo um atendimento mais rápido, transparente e eficiente à população.
 
+
 FERRAMENTAS UTILIZADAS:
+
     • React-Native
     • Expo
     • Prisma ORM
@@ -16,9 +19,15 @@ FERRAMENTAS UTILIZADAS:
     • PostgreSQL
 
 
-PASSO A PASSO PARA UTILIZAR O APLICATIVO:
+PASSO A PASSO PARA UTILIZAR O APLICATIVO: 
+ 
     • npm install
     • npx prisma generate
     • Instalar Expo Go e Scanear o QR Code
 
 CPF:123.456.789-09 SENHA:1234 → USUÁRIO TESTE
+
+
+
+
+
