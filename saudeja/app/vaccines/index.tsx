@@ -50,9 +50,7 @@ const VaccinesScreen: React.FC = () => {
               <Text style={styles.vaccineName}>{vaccine.name}</Text>
               <Text style={styles.vaccineDescription}>{vaccine.description}</Text>
             </View>
-            <View style={styles.iconContainer}>
-              <Text style={styles.iconText}>👁️</Text>
-            </View>
+
           </TouchableOpacity>
         ))}
       </ScrollView>

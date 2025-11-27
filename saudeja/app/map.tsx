@@ -81,7 +81,7 @@ const userlogout= async() =>{
             </View>
             {selectedPost?.id === post.id && (
               <View style={styles.checkmark}>
-                <Text style={styles.checkmarkText}>✓</Text>
+                
               </View>
             )}
           </TouchableOpacity>
